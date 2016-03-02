@@ -59,6 +59,7 @@ class Game
   private
 
   def all_equal?(row)
+    return if row.first == empty
     row.each_cons(2).all? { |x,y| x == y }
   end
 

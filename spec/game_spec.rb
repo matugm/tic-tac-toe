@@ -5,7 +5,7 @@ describe Game do
   let(:empty) { game.empty }
 
   it 'has a board' do
-    expect(game.board.size).to  eq(3)
+    expect(game.board.size).to eq(3)
   end
 
   it 'adds a piece to the board when making a move' do
