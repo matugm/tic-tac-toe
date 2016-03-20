@@ -6,7 +6,7 @@ class EmptyToken
 end
 
 class Game
-  attr_reader   :turn, :empty
+  attr_reader   :turn
   attr_accessor :board
 
   def initialize
