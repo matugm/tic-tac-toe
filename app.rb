@@ -30,7 +30,7 @@ loop {
 
   input = gets.chomp
   break if input == "quit"
-  next  if input.scan(/\d,\d/).empty?
+  next  if input.scan(/\A[1-3],[1-3]\Z/).empty?
 
   column, row = input.split(',').map(&:to_i)
 
