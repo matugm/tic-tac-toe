@@ -53,7 +53,11 @@ describe Game do
     end
   end
 
-  it 'checks for valid moves'
+  it 'checks if board position already in use' do
+    game.insert_token(1,1)
+
+    expect(game.insert_token(1,1)).to be_nil
+  end
   # position no already in use / filled
   # position not out of bounds
 end

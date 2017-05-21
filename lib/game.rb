@@ -15,6 +15,8 @@ class Game
   end
 
   def insert_token(x, y)
+    return unless @board[x][y].class == EmptyToken
+
     @board[x][y] = @turn
     change_turn
   end
