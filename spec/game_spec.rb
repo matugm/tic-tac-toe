@@ -21,6 +21,12 @@ describe Game do
     expect(game.board.first).to eq([empty,:x,:o])
   end
 
+  it 'checks if board position is already in use' do
+    game.insert_token(1,1)
+
+    expect(game.insert_token(1,1)).to be_nil
+  end
+
   it 'prints a visual representation of the board' do
     board      = [[:x,:x,:x], [:x, :o, :o], [:x, empty, :o]]
     game.board = board
@@ -52,12 +58,4 @@ describe Game do
       expect(game.find_winner).to eq(:x)
     end
   end
-
-  it 'checks if board position already in use' do
-    game.insert_token(1,1)
-
-    expect(game.insert_token(1,1)).to be_nil
-  end
-  # position no already in use / filled
-  # position not out of bounds
 end
